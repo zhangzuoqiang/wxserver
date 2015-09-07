@@ -1,4 +1,4 @@
-package cn.saymagic.weixin.server.bean;
+package cn.openstreet.wx.bean;
 
 
 import com.j256.ormlite.field.DatabaseField;

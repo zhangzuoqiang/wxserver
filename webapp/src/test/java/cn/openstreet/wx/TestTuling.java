@@ -1,7 +1,6 @@
-package cn.saymagic.weixin.server;
+package cn.openstreet.wx;
 
-import static junit.framework.Assert.*;  
-import cn.saymagic.weixin.server.util.TulingUtil;
+import static junit.framework.Assert.*;
 
 
 public class TestTuling {

@@ -1,4 +1,4 @@
-package cn.saymagic.weixin.server;
+package cn.openstreet.wx;
 
 public class Config {
 

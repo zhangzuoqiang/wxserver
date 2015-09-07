@@ -1,4 +1,4 @@
-package cn.saymagic.weixin.server.util;
+package cn.openstreet.wx.util;
 
 import java.io.UnsupportedEncodingException;
 

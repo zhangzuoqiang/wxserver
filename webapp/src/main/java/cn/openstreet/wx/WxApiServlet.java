@@ -1,27 +1,23 @@
-package cn.saymagic.weixin.server;
+package cn.openstreet.wx;
 
+
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.Properties;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.Logger;
-
-import cn.saymagic.weixin.server.bean.MsgRequest;
-import cn.saymagic.weixin.server.handler.BaseHandler;
-import cn.saymagic.weixin.server.handler.EventHandler;
-import cn.saymagic.weixin.server.handler.TextHandler;
-import cn.saymagic.weixin.server.util.MsgXmlUtil;
+import cn.openstreet.wx.bean.MsgRequest;
+import cn.openstreet.wx.handler.BaseHandler;
+import cn.openstreet.wx.handler.EventHandler;
+import cn.openstreet.wx.handler.TextHandler;
+import cn.openstreet.wx.util.MsgXmlUtil;
 
 
 /**
@@ -42,7 +38,7 @@ public class WxApiServlet extends HttpServlet {
         response.setStatus(200);
         response.setCharacterEncoding("UTF-8");
 		if(request.getParameter("timestamp") == null){//如果是空打印出首页
-			response.getWriter().write("欢迎拜访这个网页!");
+			response.getWriter().write("欢迎访问这个网页!");
 		}else{
 			String signature = request.getParameter("signature");// 微信加密签名
 			String timestamp = request.getParameter("timestamp");// 时间戳

@@ -7,7 +7,7 @@
 	<servlet>
 		<display-name>WxApiServlet</display-name>
 		<servlet-name>WxApiServlet</servlet-name>
-		<servlet-class>cn.saymagic.weixin.server.WxApiServlet</servlet-class>
+		<servlet-class>cn.openstreet.wx.WxApiServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>WxApiServlet</servlet-name>

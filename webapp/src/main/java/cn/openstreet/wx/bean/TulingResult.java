@@ -1,4 +1,4 @@
-package cn.saymagic.weixin.server.bean;
+package cn.openstreet.wx.bean;
 
 public class TulingResult
 {

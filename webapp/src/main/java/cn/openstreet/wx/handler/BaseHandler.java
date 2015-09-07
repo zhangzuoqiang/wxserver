@@ -1,12 +1,11 @@
-package cn.saymagic.weixin.server.handler;
+package cn.openstreet.wx.handler;
 
 import java.util.Date;
 
-import cn.saymagic.weixin.server.bean.MsgRequest;
-import cn.saymagic.weixin.server.bean.MsgResponseText;
-import cn.saymagic.weixin.server.util.MsgXmlUtil;
-import cn.saymagic.weixin.server.util.MsicUtil;
-
+import cn.openstreet.wx.bean.MsgRequest;
+import cn.openstreet.wx.util.MsgXmlUtil;
+import cn.openstreet.wx.util.MsicUtil;
+import cn.openstreet.wx.bean.MsgResponseText;
 
 
 public abstract class BaseHandler<T extends MsgRequest> {

@@ -1,18 +1,16 @@
-package cn.saymagic.weixin.server.util;
+package cn.openstreet.wx.util;
+
+import com.google.gson.Gson;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
-import cn.saymagic.weixin.server.Config;
-import cn.saymagic.weixin.server.bean.TulingResult;
-
-import com.google.gson.Gson;
+import cn.openstreet.wx.Config;
+import cn.openstreet.wx.bean.TulingResult;
 
 public class TulingUtil {
 

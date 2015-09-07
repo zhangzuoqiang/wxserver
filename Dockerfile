@@ -28,16 +28,20 @@ RUN cd /usr/local && tar xzf /tmp/apache-maven-3.1.1-bin.tar.gz
 RUN ln -s /usr/local/apache-maven-3.1.1 /usr/local/maven
 RUN rm /tmp/apache-maven-3.1.1-bin.tar.gz
 
-RUN mkdir -p /webapp
-ADD ./webapp /webapp
+RUN mkdir -p /wxserver
+RUN mkdir -p /wxserver/webapp
+ADD ./ /wxserver
+ADD ./webapp /wxserver/webapp
+RUN rm -rf /wxserver/etc /wxserver/soft /wxserver/Dockerfile /wxserver/daocloud.yml
 
 # 定义环境变量
 ENV TOMCAT_HOME /usr/local/tomcat
 ENV MAVEN_HOME /usr/local/maven
-ENV APP_HOME /webapp
+ENV WX_HOME /wxserver
+ENV APP_HOME /wxserver/webapp
 
 #编译源代码与部署
-RUN cd /webapp && /usr/local/maven/bin/mvn package 
+RUN cd /wxserver && /usr/local/maven/bin/mvn clean package
 RUN rm -rf $TOMCAT_HOME/webapps/*
 RUN cd /webapp && cp target/wx-server.war $TOMCAT_HOME/webapps/ROOT.war
 

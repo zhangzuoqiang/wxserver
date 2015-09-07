@@ -65,7 +65,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.1.1</version>
 				<configuration>
-					<warName>wx_server</warName>
+					<warName>${project.artifactId}</warName>
 				</configuration>
 			</plugin>
 			<plugin>

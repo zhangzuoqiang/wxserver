@@ -28,10 +28,9 @@ RUN cd /usr/local && tar xzf /tmp/apache-maven-3.1.1-bin.tar.gz
 RUN ln -s /usr/local/apache-maven-3.1.1 /usr/local/maven
 RUN rm /tmp/apache-maven-3.1.1-bin.tar.gz
 
+# 定义源码路径
 RUN mkdir -p /wxserver
-RUN mkdir -p /wxserver/webapp
 ADD ./ /wxserver
-ADD ./webapp /wxserver/webapp
 RUN rm -rf /wxserver/etc /wxserver/soft /wxserver/Dockerfile /wxserver/daocloud.yml
 
 # 定义环境变量

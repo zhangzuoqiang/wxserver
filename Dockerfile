@@ -1,6 +1,6 @@
 FROM ubuntu
 # 签名
-MAINTAINER saymagic "saymagic@163.com"
+MAINTAINER Zaric "zhangzuoqiang@aliyun.com"
 
 # 安装JDK与nginx
 RUN apt-get update
@@ -39,7 +39,7 @@ ENV APP_HOME /webapp
 #编译源代码与部署
 RUN cd /webapp && /usr/local/maven/bin/mvn package 
 RUN rm -rf $TOMCAT_HOME/webapps/*
-RUN cd /webapp && cp target/wx_server.war $TOMCAT_HOME/webapps/ROOT.war
+RUN cd /webapp && cp target/wx-server.war $TOMCAT_HOME/webapps/ROOT.war
 
 #启动Tomcat与Nginx
 CMD /usr/local/start.sh && tail -F /usr/local/tomcat/logs/catalina.out
